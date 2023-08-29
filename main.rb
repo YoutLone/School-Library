@@ -68,7 +68,7 @@ class Main
   end
 
   def display_welcome_message
-    puts 'Welcome to the School Library App!\n'
+    puts 'Welcome to the School Library App!'
   end
 
   def display_handler
