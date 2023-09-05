@@ -13,6 +13,7 @@
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -69,6 +70,13 @@ Clone this repository to your desired folder:
 - Clone the project to your directory by running
   - `https://github.com/YoutLone/School-Library.git`
 
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  ruby main.rb
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
