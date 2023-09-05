@@ -13,6 +13,7 @@
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -69,6 +70,13 @@ Clone this repository to your desired folder:
 - Clone the project to your directory by running
   - `https://github.com/YoutLone/School-Library.git`
 
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  ruby main.rb
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -80,6 +88,12 @@ Clone this repository to your desired folder:
  - GitHub: [@YoutLone](https://github.com/YoutLone)
  - LinkedIn: [than-myo-htet-618b2524b](https://linkedin.com/in/than-myo-htet-618b2524b)
  - Twitter: [ThanMyoHte64860](https://twitter.com/ThanMyoHte64860)
+
+### 👥 Collaborator <a name="authors"></a>
+ 👤 MD. Nohain Islam
+- GitHub: [&nbsp; &nbsp; @githubhandle](https://github.com/Zafron047)
+- Twitter: [&nbsp; &nbsp; @twitterhandle](https://twitter.com/NohainZ)
+- LinkedIn: [&nbsp; LinkedIn](https://www.linkedin.com/in/nohain-islam/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
