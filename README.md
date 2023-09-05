@@ -81,6 +81,12 @@ Clone this repository to your desired folder:
  - LinkedIn: [than-myo-htet-618b2524b](https://linkedin.com/in/than-myo-htet-618b2524b)
  - Twitter: [ThanMyoHte64860](https://twitter.com/ThanMyoHte64860)
 
+### 👥 Collaborator <a name="authors"></a>
+ 👤 MD. Nohain Islam
+- GitHub: [&nbsp; &nbsp; @githubhandle](https://github.com/Zafron047)
+- Twitter: [&nbsp; &nbsp; @twitterhandle](https://twitter.com/NohainZ)
+- LinkedIn: [&nbsp; LinkedIn](https://www.linkedin.com/in/nohain-islam/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
