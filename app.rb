@@ -80,8 +80,9 @@ class App
   end
 
   def create_rental
-    return puts 'No book records found' if @book_list.empty?
-    return puts 'No person records found' if @people_list.empty?
+    return if @book_list.empty?
+
+    return if @people_list.empty?
 
     display_books
     book_index = @input.book_index_input(@book_list.size)
@@ -98,10 +99,7 @@ class App
   end
 
   def list_rentals
-    if @rental_list.empty?
-      puts 'No rental records found'
-      return
-    end
+    return if @rental_list.empty?
 
     id = @input.person_id_input
 
