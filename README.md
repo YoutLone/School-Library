@@ -13,6 +13,7 @@
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Install](#install)
   - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -69,6 +70,11 @@ Clone this repository to your desired folder:
 - Create a local directory where you can clone the project
 - Clone the project to your directory by running
   - `https://github.com/YoutLone/School-Library.git`
+
+
+### Installation
+Install **Ruby Installer** using this link
+- <a href="https://rubyinstaller.org/downloads/">Ruby Installer</a>
 
 ### Usage
 
