@@ -82,6 +82,11 @@ To run the project, execute the following command:
 ```sh
   ruby main.rb
 ```
+To run the tests, execute the following command:
+
+```sh
+  respec spec
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
