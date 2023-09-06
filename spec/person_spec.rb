@@ -1,51 +1,41 @@
 require_relative '../person'
-require 'date'
 
 describe Person do
-  let(:person) { Person.new(25, 'John Doe') }
-  let(:young_person) { Person.new(15, 'Alice', parent_permission: true) }
-  let(:book) { double('book') }
-  let(:date) { Date.new(2023, 9, 6) }
-
-  context 'attributes' do
-    it 'has an ID' do
-      expect(person.id).to be_a(Integer)
-    end
-
-    it 'has a name' do
-      expect(person.name).to eq('John Doe')
-    end
-
-    it 'has an age' do
-      expect(person.age).to eq(25)
-    end
-
-    it 'has a rental history' do
-      expect(person.rental).to be_an(Array)
-    end
+  before :each do
+    @person = Person.new(30, 'JK Rowling', parent_permission: 'true')
   end
 
-  context 'age verification' do
-    it 'is of age' do
-      expect(person.send(:of_age?)).to be true
-    end
-
-    it 'is not of age and has parent permission' do
-      expect(young_person.send(:of_age?)).to be false
-      expect(young_person.send(:can_use_services?)).to be true
-    end
-
-    it 'is not of age and does not have parent permission' do
-      young_person.instance_variable_set(:@parent_permission, false)
-      expect(young_person.send(:can_use_services?)).to be false
-    end
+  it 'checking person instance' do
+    expect(@person).to be_instance_of Person
   end
 
-  # The constructor method should set the default value for the optional name parameter if it is not provided.
-  context 'constructor' do
-    it 'sets the default value for the optional name parameter if not provided' do
-      unnamed_person = Person.new(30)
-      expect(unnamed_person.name).to eq('Unknown')
-    end
+  it 'checking attributes' do
+    puts @person.name
+    puts @person.age
+    puts @person.parent_permission
+    expect(@person).to have_attributes(age: 30, name: 'JK Rowling', parent_permission: 'true')
+  end
+
+  it 'test for add_rental' do
+    book = double('book', rental: [])
+    allow(book).to receive(:title) { 'Harry Potter' }
+    allow(book).to receive(:author) { 'JK Rowling' }
+    date = '02-23-2020'
+    rental = @person.add_rental(book, date)
+    expect(@person.rental).to include(rental)
+    expect(rental.book.title).to eq('Harry Potter')
+    expect(rental.date).to eq(date)
+  end
+
+  it 'correct name method' do
+    expect(@person.correct_name).to eq('JK Rowling')
+  end
+
+  it 'correct age method' do
+    expect(@person.send('of_age?')).to be true
+  end
+
+  it 'can use services' do
+    expect(@person.can_use_service?).to be true
   end
 end

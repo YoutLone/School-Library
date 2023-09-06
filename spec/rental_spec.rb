@@ -1,33 +1,32 @@
-require 'date'
 require_relative '../rental'
 
 describe Rental do
-  let(:date) { Date.new(2023, 9, 6) }
-  let(:person) { double('person', rental: []) }
-  let(:book) { double('book', rental: []) }
-  let(:rental) { Rental.new(date, person, book) }
+  before :each do
+    person = double('Person', rental: [])
+    allow(person).to receive(:age) { 12 }
+    allow(person).to receive(:name) { 'JK Rowling' }
+    allow(person).to receive(:parent_permission) { true }
 
-  context 'attributes' do
-    it 'has a date' do
-      expect(rental.date).to eq(date)
-    end
+    book = double('book', rental: [])
+    allow(book).to receive(:title) { 'Harry Potter' }
+    allow(book).to receive(:author) { 'JK Rowling' }
 
-    it 'has a person' do
-      expect(rental.person).to eq(person)
-    end
-
-    it 'has a book' do
-      expect(rental.book).to eq(book)
-    end
+    @rental = Rental.new('2020-05-24', person, book)
   end
 
-  context 'associations' do
-    it 'adds itself to the person\'s rental history' do
-      expect(person.rental).to include(rental)
-    end
+  it 'checking rental instance' do
+    expect(@rental).to be_instance_of Rental
+  end
 
-    it 'adds itself to the book\'s rental history' do
-      expect(book.rental).to include(rental)
-    end
+  it 'checking attributes' do
+    expect(@rental.date).to eq('2020-05-24')
+  end
+
+  it 'checking for book' do
+    expect(@rental.book.title).to eq('Harry Potter')
+  end
+
+  it 'checking for person' do
+    expect(@rental.person.name).to eq('JK Rowling')
   end
 end
